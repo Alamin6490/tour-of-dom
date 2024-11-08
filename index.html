@@ -27,7 +27,24 @@
      </main>
      <script src="js/dom.js"></script>
      <script>
-        console.log('js Adding html file');
+        //const student = {
+        //    name :'Abul',
+        //    ID: 11,
+        //    study: function (time) {
+        //        console.log(time, 'study kortese');
+        //    }
+        //}
+        //console.log('js Adding html file');
+        const  liCollection = document.getElementsByTagName('li');
+        //console.log(liCollection);
+        for(const li of liCollection){
+            console.log(li.innerText);
+        }
+        const allHeading = document.getElementsByTagName('h1');
+        for(const h1 of allHeading){
+            console.log(h1.innerText);
+        }
+
      </script>
 </body>
 </html>
