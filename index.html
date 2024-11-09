@@ -9,6 +9,12 @@
     li{
         color: yellowgreen;
     }
+    #fruits-title{
+        color: black;
+    }
+    .important-place{
+        color: aqua;
+    }
     </style>
 </head>
 <body>
@@ -16,7 +22,9 @@
         <h1>Welcome to my Dom </h1>
      </header>
      <main>
-        <h1>My Awesome Dom de baba</h1>
+        <section>
+            <h1>My Awesome Dom de baba</h1>
+
         <ul>
             <li>jalali set</li>
             <li>Shafayet</li>
@@ -24,6 +32,24 @@
             <li>Mahiya mahi</li>
 
         </ul>
+       </section>
+        <section>
+            <h1 id="fruits-title">Fruits I like</h1>
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Carrot</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="place-title">Place i like to visit</h1>
+            <ul>
+                <li class="important-places">Soondarbon</li>
+                <li class="important-places">Bandorbon</li>
+                <li class="important-places">Katabon</li>
+                <li class="other-places">Shalbon</li>
+            </ul>
+        </section>
      </main>
      <script src="js/dom.js"></script>
      <script>
@@ -40,11 +66,20 @@
         for(const li of liCollection){
             console.log(li.innerText);
         }
+        
+
         const allHeading = document.getElementsByTagName('h1');
         for(const h1 of allHeading){
             console.log(h1.innerText);
         }
 
+        const fruitsTitle = document.getElementById('fruits-title');
+        fruitsTitle.innerText = 'Fruits changed by js';
+
+         const places = document.getElementsByClassName('important-places');
+         for(const place of places){
+            console.log(place.innerText);
+         }
      </script>
 </body>
 </html>
